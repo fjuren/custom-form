@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- https://fonts.google.com/specimen/Poppins?category=Serif,Sans+Serif&thickness=6&preview.text=Create%20new%20account&preview.text_type=custom -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Custom form validation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+            </style>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="preface">
+            <p>This page is to demonstrate a regular form but with custom messaging rather than stock 'out of the box' messaging</p>
+            <p>Benefits of custom form validation messaging:</p>
+            <ul>
+                <li>Tailor messaging based on your user audience</li>
+                <li>Add humor or something you think would benefit the UX</li>
+                <li>Steer users to where to find information if the content they need to submit is very specific to your data needs</li>
+                <li>Provide specific examples of what the user should type rather than having a message that broadly state "Incorrect format"</li>
+            </ul>
+        </div>
+
+
+        <p>--------------------------</p>
+        <!-- novalidate remoes stock form validation -->
+        <form novalidate action="#">
+            <h3>Personal</h3>
+            <div id="radio">
+                <input type="radio" name="title" id="titleMr">
+                <label for="titleMr">Mr</label>
+                <input type="radio" name="title" id="titleMs">
+                <label for="titleMs">Ms</label>
+                <input type="radio" name="title" id="titleMrs">
+                <label for="titleMrs">Mrs</label>
+                <input type="radio" name="title" id="titleDr">
+                <label for="titleDr">Dr</label>
+            </div>
+            <div class="boxes">
+
+            </div>
+            <h3>Contact</h3>
+            <div class="boxes">
+                
+            </div>
+
+            <h3>Account</h3>
+            <div class="boxes">
+                
+            </div>
+
+        </form>
+        <script src="app.js" async defer></script>
+    </body>
+</html>
