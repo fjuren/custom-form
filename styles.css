@@ -9,14 +9,33 @@ body {
 
 form {
     font-family: 'Poppins', sans-serif;
-    border-color: black;
+    /* border-color: black; */
+}
+
+label {
+    color: #565760;
 }
 
 .boxes input {
-    color:red;
-    border-color: #5876A5;
+    display: block;
+    color: #FEFEFF;
+    background-color: #343644;
     border-radius: 8px;
     height: 2rem;
+    border-width: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #292A36;
+    /* padding: 0; */
+}
+.boxes input:hover {
+    border-color: #565760;
+    border-width: 2px;
+}
+.boxes input:focus {
+    outline: none;
+    border: 2px solid #5876A5;
+    /* box-shadow: #5876A5; */
 }
 
 /* .required:after {

@@ -27,7 +27,7 @@
 
         <p>--------------------------</p>
         <!-- novalidate remoes stock form validation -->
-        <form novalidate action="#">
+        <form action="#">
             <h3>Personal</h3>
             <div id="radio">
                 <input type="radio" name="title" id="titleMr">
@@ -41,13 +41,17 @@
             </div>
             <div class="boxes">
                 <!-- first name -->
-                <input type="text" name="fName" id="fName" placeholder="First name" required>
+                <label for="fName">First name</label>
+                <input type="text" name="fName" id="fName" required>
                 <!-- middle name -->
-                <input type="text" name="mName" id="mName" placeholder="Middle name">
+                <label for="mName">Middle name</label>
+                <input type="text" name="mName" id="mName">
                 <!-- last name -->
-                <input type="text" name="lName" id="lName" placeholder="Last name" required>
+                <label for="lName">Last name</label>
+                <input type="text" name="lName" id="lName" required>
                 <!-- Date of birth -->
-                <input type="date" name="dob" id="dob" placeholder="Date of birth" required>
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" id="dob" required>
             </div>
             <h3>Contact</h3>
             <div class="boxes">
