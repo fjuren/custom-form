@@ -4,9 +4,22 @@
 
 body {
     background-color: #292A36;
+    color: #FEFEFF;
 }
 
 form {
     font-family: 'Poppins', sans-serif;
     border-color: black;
 }
+
+.boxes input {
+    color:red;
+    border-color: #5876A5;
+    border-radius: 8px;
+    height: 2rem;
+}
+
+/* .required:after {
+    content:" *";
+    color: red;
+  } */
