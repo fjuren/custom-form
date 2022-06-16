@@ -107,8 +107,8 @@ label {
 #submitButton:hover {
     cursor: pointer;
 }
-
-/* .required:after {
+/* 
+.required:after {
     content:" *";
     color: red;
   } */
