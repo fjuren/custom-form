@@ -29,15 +29,23 @@
         <!-- novalidate remoes stock form validation -->
         <form action="#" autocomplete="off">
             <h3>Personal</h3>
-            <div id="radio">
-                <input type="radio" name="title" id="titleMr">
-                <label for="titleMr">Mr</label>
-                <input type="radio" name="title" id="titleMs">
-                <label for="titleMs">Ms</label>
-                <input type="radio" name="title" id="titleMrs">
-                <label for="titleMrs">Mrs</label>
-                <input type="radio" name="title" id="titleDr">
-                <label for="titleDr">Dr</label>
+            <div id="radio-group">
+                <label class="radio" for="titleMr">Mr
+                    <input type="radio" name="title" id="titleMr">
+                    <span class="bullet"></span>
+                </label>
+                <label  class="radio"for="titleMs">Ms
+                    <input type="radio" name="title" id="titleMs">
+                    <span class="bullet"></span>
+                </label>
+                <label class="radio" for="titleMrs">Mrs
+                    <input type="radio" name="title" id="titleMrs">
+                    <span class="bullet"></span>
+                </label>
+                <label class="radio" for="titleDr">Dr
+                    <input type="radio" name="title" id="titleDr">
+                    <span class="bullet"></span>
+                </label>
             </div>
             <div class="boxes">
                 <div class="input-group">

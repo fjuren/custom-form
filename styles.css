@@ -12,10 +12,56 @@ form {
     /* border-color: black; */
 }
 
+#radio-group {
+    display: grid;
+}
+
+.radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  /* Create a custom radio button */
+.bullet {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  /* On mouse-over, add a grey background color */
+.radio:hover input ~ .bullet {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+.radio input:checked ~ .bullet {
+    background-color: #2196F3;
+}
+
 label {
     color: #7B7E89;
 }
 
+.boxes {
+    display: grid;
+}
 .boxes input {
     display: block;
     color: #FEFEFF;
@@ -50,13 +96,16 @@ label {
 }
 
 #submitButton {
-    background-color: #608FED;
-    border-color: #608FED;
+    background-color: #2196F3;
+    border-color: #2196F3;
     border-style: solid;
     color:#FEFEFF;
     border-radius: 25px;
     height: 2rem;
     width: 6rem;
+}
+#submitButton:hover {
+    cursor: pointer;
 }
 
 /* .required:after {
