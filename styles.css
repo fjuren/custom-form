@@ -57,7 +57,7 @@ form {
 }
 
 label {
-    color: #7B7E89;
+    color: #abadb5;
 }
 
 .boxes {
@@ -114,3 +114,17 @@ label {
     content:" *";
     color: red;
   } */
+
+  /* IPHONE FORM VIEW */
+
+  /* 2532x1170 pixels at 460ppi */
+  @media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) { 
+    .boxes {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+  }
