@@ -15,6 +15,7 @@ form {
 #radio-group {
     display: grid;
     grid-template-columns: auto auto;
+    padding-bottom: 15px;
 }
 
 .radio {
@@ -123,8 +124,35 @@ label {
   and (device-height: 844px) 
   and (-webkit-device-pixel-ratio: 3) { 
     .boxes {
-        display: grid;
-        grid-template-columns: auto;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+    .boxes input {
+        width: 87%;
+    }
+    .input-group {
+        margin-left: 10px
     }
   }
+
+
+
+
+  /* ignore below */
+
+  /* <div class="input-group">
+  <!-- first name -->
+  <label for="fName">First name</label>
+  <input type="text" name="fName" id="fName" class="asterisk" required>
+</div>
+<div class="input-group">
+  <!-- middle name -->
+  <label for="mName">Middle name</label>
+  <input type="text" name="mName" id="mName">
+</div>
+<div class="input-group">
+      <!-- last name -->
+  <label for="lName">Last name</label>
+  <input type="text" name="lName" id="lName" required>
+</div> */
