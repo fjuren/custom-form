@@ -134,6 +134,11 @@ label {
     .input-group {
         margin-left: 10px
     }
+    input[type='text'],
+    input[type='number'],
+    textarea {
+    font-size: 16px;
+    }
   }
 
 
