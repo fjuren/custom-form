@@ -2,9 +2,13 @@
     font-style: italic;
 }
 
+
+
 body {
-    background-color: #292A36;
     color: #FEFEFF;
+    background: linear-gradient(to left, rgba(41, 42, 54, 1),
+    rgba(41, 42, 54, 0)), url(undefined\ -\ Imgur.png);
+    background-position: 29%;
 }
 
 form {
