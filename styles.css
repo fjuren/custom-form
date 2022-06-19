@@ -74,7 +74,7 @@ label {
     gap: 10px;
     justify-content: center;
 }
-.boxes input {
+/* .boxes input {
     display: block;
     color: #FEFEFF;
     background-color: #343644;
@@ -84,9 +84,8 @@ label {
     border-style: solid;
     border-width: 2px;
     border-color: #292A36;
-    /* font-weight: bold; */
     padding: .3rem 1rem 0 1rem;
-}
+} */
 .boxes input:hover {
     border-color: #7B7E89;
     border-width: 2px;
@@ -106,13 +105,18 @@ label {
     left: 1rem;
     font-size: .6rem;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #343644 inset !important;
-    box-shadow: 0 0 0 30px #343644 inset !important;;
-    -webkit-text-fill-color: #FEFEFF !important;
+.input-group input {
+    display: block;
+    color: #FEFEFF;
+    background-color: #343644;
+    border-radius: 15px;
+    height: 2.3rem;
+    border-width: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #292A36;
+    /* font-weight: bold; */
+    padding: .3rem 1rem 0 1rem;
 }
 
 #submitButton {
@@ -155,6 +159,19 @@ input:-webkit-autofill:active{
     .input-group {
         margin-left: 10px
     }
+    .input-group input {
+        display: block;
+        color: #FEFEFF;
+        background-color: #343644;
+        border-radius: 15px;
+        height: 2.3rem;
+        border-width: 0;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #292A36;
+        /* font-weight: bold; */
+        padding: .3rem 1rem 0 1rem;
+    }
     input[type='text'],
     input[type='number'],
     input[type='date'],
@@ -167,9 +184,10 @@ input:-webkit-autofill:active{
     input:-webkit-autofill:hover, 
     input:-webkit-autofill:focus, 
     input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px #343644 inset !important;
-    box-shadow: 0 0 0 30px #343644 inset !important;
-    -webkit-text-fill-color: #FEFEFF !important;
+        -webkit-box-shadow: 0 0 0 30px #343644 inset !important;
+        box-shadow: 0 0 0 30px #343644 inset !important;
+        background-color: #343644 inset !important;
+        -webkit-text-fill-color: #FEFEFF !important;
     }
   }
 
