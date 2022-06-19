@@ -74,18 +74,6 @@ label {
     gap: 10px;
     justify-content: center;
 }
-/* .boxes input {
-    display: block;
-    color: #FEFEFF;
-    background-color: #343644;
-    border-radius: 15px;
-    height: 2.3rem;
-    border-width: 0;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #292A36;
-    padding: .3rem 1rem 0 1rem;
-} */
 .boxes input:hover {
     border-color: #7B7E89;
     border-width: 2px;
@@ -159,19 +147,6 @@ label {
     .input-group {
         margin-left: 10px
     }
-    .input-group input {
-        display: block;
-        color: #FEFEFF;
-        background-color: #343644;
-        border-radius: 15px;
-        height: 2.3rem;
-        border-width: 0;
-        border-style: solid;
-        border-width: 2px;
-        border-color: #292A36;
-        /* font-weight: bold; */
-        padding: .3rem 1rem 0 1rem;
-    }
     input[type='text'],
     input[type='number'],
     input[type='date'],
@@ -179,6 +154,7 @@ label {
     input[type='tel'],
     textarea {
     font-size: 16px;
+    -webkit-appearance: none;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
