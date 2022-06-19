@@ -2,7 +2,9 @@
     font-style: italic;
 }
 
-
+h3 {
+    text-align: center;
+}
 
 body {
     color: #FEFEFF;
@@ -18,16 +20,17 @@ form {
 
 #radio-group {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     padding-bottom: 15px;
+    justify-content: center;
 }
 
 .radio {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding: 0 25px 0 25px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 15px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -44,7 +47,7 @@ form {
   /* Create a custom radio button */
 .bullet {
     position: absolute;
-    top: 7px;
+    top: 2px;
     left: 0;
     height: 18px;
     width: 18px;
@@ -68,6 +71,8 @@ label {
 .boxes {
     display: grid;
     grid-template-columns: auto auto;
+    gap: 10px;
+    justify-content: center;
 }
 .boxes input {
     display: block;
@@ -110,8 +115,11 @@ input:-webkit-autofill:active{
     -webkit-text-fill-color: #FEFEFF !important;
 }
 
-
 #submitButton {
+    text-align: center;
+    padding-top: 20px;
+}
+#submitButton > input {
     background-color: #2196F3;
     border-color: #2196F3;
     border-style: solid;
@@ -120,7 +128,7 @@ input:-webkit-autofill:active{
     height: 2rem;
     width: 6rem;
 }
-#submitButton:hover {
+#submitButton > input:hover {
     cursor: pointer;
 }
 
