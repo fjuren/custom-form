@@ -154,9 +154,14 @@ label {
     input[type='tel'],
     textarea {
     font-size: 16px;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance:    none;
-    appearance:         none;
+    appearance:         none; */
+    }
+    input {
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
