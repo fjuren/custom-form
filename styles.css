@@ -153,15 +153,15 @@ label {
     input[type='email'],
     input[type='tel'],
     textarea {
-    font-size: 16px;
-    /* -webkit-appearance: none;
-    -moz-appearance:    none;
-    appearance:         none; */
+        font-size: 16px;
     }
     input {
         -webkit-appearance: none;
         -moz-appearance:    none;
         appearance:         none;
+        top: 0.2rem;
+        left: 1rem;
+        font-size: .6rem;
     }
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
