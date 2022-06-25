@@ -14,7 +14,7 @@
     </head>
     <body>
         <!-- novalidate remoes stock form validation -->
-        <form action="#" autocomplete="on">
+        <form action="#" autocomplete="off" novalidate>
             <h3>Personal</h3>
             <div id="radio-group">
                 <label class="radio" for="titleMr">Mr
@@ -37,13 +37,18 @@
             <div class="boxes">
                 <div class="input-group">
                     <!-- first name -->
-                    <label for="fName">Full name</label>
+                    <label for="fName" id="fNameLabel">Full name
+                        <span class="error"></span>
+                    </label>
                     <input type="text" name="fName" id="fName" class="asterisk" required>
+                    
                 </div>
                 <div class="input-group">
                     <!-- Date of birth -->
-                    <label for="dob">Date of birth</label>
-                    <input type="date" name="dob" id="dob" required>
+                    <label for="dob">Date of birth
+                        <span class="error"></span>
+                    </label>
+                    <input type="date" name="dob" id="dob" >
                 </div>
             </div>
             <h3>Contact</h3>
@@ -51,7 +56,7 @@
                 <div class="input-group">
                     <!-- Address -->
                     <label for="address">Address</label>
-                    <input type="text" name="address" id="address" required>
+                    <input type="text" name="address" id="address" >
                 </div>
                 <div class="input-group">
                     <!-- Unit number -->
@@ -61,32 +66,32 @@
                 <div class="input-group">
                     <!-- City -->
                     <label for="city">City</label>
-                    <input type="text" name="city" id="city" required>
+                    <input type="text" name="city" id="city" >
                 </div>
                 <div class="input-group">
                     <!-- State/province -->
                     <label for="state/province">State/province</label>
-                    <input type="text" name="state/province" id="state/province" required>
+                    <input type="text" name="state/province" id="state/province" >
                 </div>
                 <div class="input-group">
                     <!-- Zip/postal code -->
                     <label for="postal">Zip/postal code</label>
-                    <input type="text" name="zip/postal" id="zip/postal" required>
+                    <input type="text" name="zip/postal" id="zip/postal" >
                 </div>
                 <div class="input-group">
                     <!-- Country -->
                     <label for="country">Country</label>
-                    <input type="text" name="country" id="country" required>
+                    <input type="text" name="country" id="country" >
                 </div>
                 <div class="input-group">
                     <!-- Email -->
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email" >
                 </div>
                 <div class="input-group">
                     <!-- Phone number -->
                     <label for="phone">Phone number</label>
-                    <input type="tel" name="phone" id="phone" required>
+                    <input type="tel" name="phone" id="phone" >
                 </div>
             </div>
 
@@ -95,17 +100,17 @@
                 <div class="input-group">
                     <!-- Username -->
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" >
                 </div>
                 <div class="input-group">
                     <!-- Password -->
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" >
                 </div>
                 <div class="input-group">
                     <!-- Repeat Password -->
                     <label for="password">Repeat password</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" >
                 </div>
             </div>
             <div id="submitButton">

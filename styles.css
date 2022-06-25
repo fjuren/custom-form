@@ -156,24 +156,32 @@ label {
         font-size: 16px;
         appearance: none;
     }
-    /* input {
-        -webkit-appearance: none;
-        -moz-appearance:    none;
-        appearance:         none;
-    } */
     input:-webkit-autofill,
     input:-webkit-autofill:hover, 
     input:-webkit-autofill:focus, 
     input:-webkit-autofill:active{
-        -webkit-box-shadow: 0 0 0 30px #343644 inset !important;
         box-shadow: 0 0 0 30px #343644 inset !important;
         background-color: #343644 inset !important;
-        -webkit-text-fill-color: #FEFEFF !important;
     }
   }
 
+/* ERROR STYLE HANDLING */
+/* input:invalid {
+    border-color: #900;
+    background-color: #FDD;
+} */
 
-
+.error {
+    width  : 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+  }
 
   /* ignore below */
 
