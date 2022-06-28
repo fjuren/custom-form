@@ -37,11 +37,10 @@
             <div class="boxes">
                 <div class="input-group">
                     <!-- first name -->
-                    <label for="fName" id="fNameLabel">Full name
+                    <label for="fName">Full name
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="fName" id="fName" class="asterisk" required>
-                    
+                    <input type="text" name="fName" id="fName" class="asterisk" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+$" required>
                 </div>
                 <div class="input-group">
                     <!-- Date of birth -->
