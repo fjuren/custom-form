@@ -68,7 +68,7 @@ const fullNameErrorHandling = () => {
 // Assesses validation criteria for date of birth field
 const dobError = () => {
     if (dobInput.validity.valueMissing) {
-        dobErrorMessage.textContent = 'Please provide your date of birth';
+        dobErrorMessage.textContent = 'Please enter your date of birth';
     } else {
         // do nothing
     }
@@ -85,7 +85,11 @@ const dobErrorHandling = () => {
 
 // Assesses validation criteria for address field
 const addressError = () => {
-
+    if (addressInput.validity.valueMissing) {
+        addressErrorMessage.textContent = 'Please enter your address';
+    } else {
+        // do nothing
+    }
 };
 
 // address prompt. Called when submit btn pressed
@@ -99,7 +103,11 @@ const addressErrorHandling = () => {
 
 // Assesses validation criteria for unit number field
 const unitNumberError = () => {
-
+    if (unitNumberInput.validity.valueMissing) {
+        unitNumberErrorMessage.textContent = 'Please enter your unit number';
+    } else {
+        // do nothing
+    }
 };
 
 // unit number prompt. Called when submit btn pressed
@@ -113,7 +121,11 @@ const unitNumberErrorHandling = () => {
 
 // Assesses validation criteria for city field
 const cityError = () => {
-
+    if (cityInput.validity.valueMissing) {
+        cityErrorMessage.textContent = 'Please enter your city';
+    } else {
+        // do nothing
+    }
 };
 
 // City prompt. Called when submit btn pressed
@@ -127,7 +139,11 @@ const cityErrorHandling = () => {
 
 // Assesses validation criteria for state/provnice field
 const stateProvinceError = () => {
-
+    if (stateProvinceInput.validity.valueMissing) {
+        stateProvinceErrorMessage.textContent = 'Please enter your state or province';
+    } else {
+        // do nothing
+    }
 };
 
 // state/province prompt. Called when submit btn pressed
@@ -141,7 +157,11 @@ const stataProvinceErrorHandling = () => {
 
 // Assesses validation criteria for zip/postal code field
 const zipError = () => {
-
+    if (zipInput.validity.valueMissing) {
+        zipErrorMessage.textContent = 'Please enter your zip code or postal code';
+    } else {
+        // do nothing
+    }
 };
 
 // zip/postal code prompt. Called when submit btn pressed
@@ -155,7 +175,11 @@ const zipErrorHandling = () => {
 
 // Assesses validation criteria for country field
 const countryError = () => {
-
+    if (countryInput.validity.valueMissing) {
+        countryErrorMessage.textContent = 'Please enter your country';
+    } else {
+        // do nothing
+    }
 };
 
 // country prompt. Called when submit btn pressed
@@ -169,7 +193,11 @@ const countryErrorHandling = () => {
 
 // Assesses validation criteria for email field
 const emailError = () => {
-
+    if (emailInput.validity.valueMissing) {
+        emailErrorMessage.textContent = 'Please enter your email';
+    } else {
+        // do nothing
+    }
 };
 
 // email prompt. Called when submit btn pressed
@@ -183,7 +211,11 @@ const emailErrorHandling = () => {
 
 // Assesses validation criteria for phone field
 const phoneError = () => {
-
+    if (phoneInput.validity.valueMissing) {
+        phoneErrorMessage.textContent = 'Please enter your phone number';
+    } else {
+        // do nothing
+    }
 };
 
 // phone prompt. Called when submit btn pressed
@@ -197,7 +229,11 @@ const phoneErrorHandling = () => {
 
 // Assesses validation criteria for username field
 const usernameError = () => {
-
+    if (usernameInput.validity.valueMissing) {
+        usernameErrorMessage.textContent = 'Please enter your username';
+    } else {
+        // do nothing
+    }
 };
 
 // username prompt. Called when submit btn pressed
@@ -211,7 +247,11 @@ const usernameErrorHandling = () => {
 
 // Assesses validation criteria for password1 field
 const password1Error = () => {
-
+    if (password1Input.validity.valueMissing) {
+        password1ErrorMessage.textContent = 'Please enter your password';
+    } else {
+        // do nothing
+    }
 };
 
 // password1 prompt. Called when submit btn pressed
@@ -225,7 +265,11 @@ const password1ErrorHandling = () => {
 
 // Assesses validation criteria for password2 field
 const password2Error = () => {
-
+    if (password2Input.validity.valueMissing) {
+        password2ErrorMessage.textContent = 'Please re-enter your password';
+    } else {
+        // do nothing
+    }
 };
 
 // password2 prompt. Called when submit btn pressed
