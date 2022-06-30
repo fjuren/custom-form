@@ -4,6 +4,7 @@
 
 h3 {
     text-align: center;
+    margin-top: 2rem;
 }
 
 body {
@@ -66,6 +67,8 @@ form {
 
 label {
     color: #abadb5;
+    position: relative;
+    width: 75%;
 }
 
 .boxes {
@@ -106,6 +109,9 @@ label {
     /* font-weight: bold; */
     padding: .3rem 1rem 0 1rem;
 }
+input[type='date'] {
+    width: 162.5px;
+}
 
 #submitButton {
     text-align: center;
@@ -123,6 +129,20 @@ label {
 #submitButton > input:hover {
     cursor: pointer;
 }
+
+
+.error {
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    width: 100%;
+    padding: 0;
+    font-size: 95%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+  }
 
 /* .asterisk::before {
     content:" *";
@@ -163,6 +183,18 @@ label {
         box-shadow: 0 0 0 30px #343644 inset !important;
         background-color: #343644 inset !important;
     }
+    .error {
+        display: inline;
+        position: unset;
+        margin-left: 3px;
+        width: 100%;
+        padding: 0;
+        font-size: 95%;
+        color: white;
+        background-color: #900;
+        border-radius: 0 0 5px 5px;
+        box-sizing: border-box;
+    }
   }
 
 /* ERROR STYLE HANDLING */
@@ -170,16 +202,6 @@ label {
     border-color: #900;
     background-color: #FDD;
 } */
-
-.error {
-    width: 100%;
-    padding: 0;
-    font-size: 80%;
-    color: white;
-    background-color: #900;
-    border-radius: 0 0 5px 5px;
-    box-sizing: border-box;
-  }
 
   /* ignore below */
 
