@@ -64,7 +64,7 @@
                     <label for="unitNumber">Unit number
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="unitNumber" id="unitNumber" required>
+                    <input type="text" name="unitNumber" id="unitNumber" pattern="[0-9]" required>
                 </div>
                 <div class="input-group">
                     <!-- City -->
@@ -92,7 +92,7 @@
                     <label for="country">Country
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="country" id="country" required>
+                    <input type="text" name="country" id="country" pattern="^[A-Z][a-zA-Z]*$" required>
                 </div>
                 <div class="input-group">
                     <!-- Email -->
@@ -106,7 +106,7 @@
                     <label for="phone">Phone number
                         <span class="error"></span>
                     </label>
-                    <input type="tel" name="phone" id="phone" required>
+                    <input type="tel" name="phone" id="phone" maxlength="14" required>
                 </div>
             </div>
 

@@ -133,6 +133,7 @@ input[type='date'] {
 
 .error {
     position: absolute;
+    z-index: 1;
     top: 44px;
     left: 0px;
     width: 100%;

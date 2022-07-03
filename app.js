@@ -49,7 +49,7 @@ const fullNameError = () => {
     if (fullNameInput.validity.valueMissing) {
         fullNameErrorMessage.textContent = 'Please enter your first and last name';
     } else if (fullNameInput.validity.patternMismatch) {
-        fullNameErrorMessage.textContent = 'Look at the example for proper format (E.g., John Smith)';
+        fullNameErrorMessage.textContent = 'Use caps for your name! (E.g., John Smith)';
     } else {
         // do nothing
     }
@@ -105,6 +105,8 @@ const addressErrorHandling = () => {
 const unitNumberError = () => {
     if (unitNumberInput.validity.valueMissing) {
         unitNumberErrorMessage.textContent = 'Please enter your unit number';
+    } else if (unitNumberInput.validity.patternMismatch) {
+        unitNumberErrorMessage.textContent = 'Please enter numerical values only';
     } else {
         // do nothing
     }
@@ -137,6 +139,11 @@ const cityErrorHandling = () => {
         }
 };
 
+// format for city field
+cityInput.addEventListener('keypress', (event) => {
+
+});
+
 // Assesses validation criteria for state/provnice field
 const stateProvinceError = () => {
     if (stateProvinceInput.validity.valueMissing) {
@@ -154,6 +161,21 @@ const stataProvinceErrorHandling = () => {
             stateProvinceErrorMessage.textContent = '';
         }
 };
+
+// format for province field
+const provinceFormatter = () => {
+    stateProvinceInput.addEventListener('keypress', (event) => {
+
+});
+};
+
+// format for state field
+const stateFormatter = () => {
+    stateProvinceInput.addEventListener('keypress', (event) => {
+
+    });
+};
+
 
 // Assesses validation criteria for zip/postal code field
 const zipError = () => {
@@ -173,10 +195,26 @@ const zipErrorHandling = () => {
         }
 };
 
+// format for zip code
+const zipFormatter = () => {
+    stateProvinceInput.addEventListener('keypress', (event) => {
+
+});
+};
+
+// format for postal code
+const postalFormatter = () => {
+    stateProvinceInput.addEventListener('keypress', (event) => {
+
+    });
+};
+
 // Assesses validation criteria for country field
 const countryError = () => {
     if (countryInput.validity.valueMissing) {
         countryErrorMessage.textContent = 'Please enter your country';
+    } else if (countryInput.validity.patternMismatch) {
+        countryErrorMessage.textContent = 'Use caps for your country! (e.g., Canada)';
     } else {
         // do nothing
     }
@@ -189,6 +227,13 @@ const countryErrorHandling = () => {
         } else {
             countryErrorMessage.textContent = '';
         }
+};
+
+// format for Country
+const countryFormatter = () => {
+    countryInput.addEventListener('keypress', (event) => {
+
+});
 };
 
 // Assesses validation criteria for email field
@@ -209,6 +254,13 @@ const emailErrorHandling = () => {
         }
 };
 
+// format for email
+const emailFormatter = () => {
+    emailInput.addEventListener('keypress', (event) => {
+
+});
+};
+
 // Assesses validation criteria for phone field
 const phoneError = () => {
     if (phoneInput.validity.valueMissing) {
@@ -217,6 +269,23 @@ const phoneError = () => {
         // do nothing
     }
 };
+
+// formatting for phone field
+phoneInput.addEventListener('keypress', (event) => {
+    const phoneInputLength = phoneInput.value.length;
+    const holder = phoneInput.value;
+    if (phoneInputLength === 0) {
+        phoneInput.value = holder + '(';
+    } else if (phoneInputLength === 4) {
+        phoneInput.value = holder + ') ';
+    } else if (phoneInputLength === 6) {
+        phoneInput.value = holder + ' ';
+    } else if (phoneInputLength === 9) {
+        phoneInput.value = holder + '-';
+    } else {
+        // do nothing
+    }
+});
 
 // phone prompt. Called when submit btn pressed
 const phoneErrorHandling = () => {
