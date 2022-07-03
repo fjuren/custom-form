@@ -13,6 +13,16 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+        <div id="preContent">
+            <h3>Custom form validation</h3>
+            <p>This page is to demonstrate custom validation messaging rather than stock, 'out of the box' messaging. Postal code and phone number fields demonstrate auto formatting for users</p>
+            <p>Out of scope: country information outside of Canada</p>
+            <p>Try the following:</p>
+            <ol>
+                <li>Click submit without completing any fields</li>
+                <li>Type your full name without capitalization</li>
+                <li>Enter a unit number like "Unit 35"</li>
+            </ol>
         <!-- novalidate remoes stock form validation -->
         <form action="#" autocomplete="off" novalidate>
             <h3>Personal</h3>
@@ -75,17 +85,17 @@
                 </div>
                 <div class="input-group">
                     <!-- State/province -->
-                    <label for="stateProvince">State/province
+                    <label for="Province">Province
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="stateProvince" id="stateProvince" required>
+                    <input type="text" name="Province" id="Province" required>
                 </div>
                 <div class="input-group">
                     <!-- Zip/postal code -->
-                    <label for="zipPostal">Zip/postal code
+                    <label for="Postal">Postal code
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="zipPostal" id="zipPostal" required>
+                    <input type="text" name="Postal" id="Postal" required>
                 </div>
                 <div class="input-group">
                     <!-- Country -->
@@ -138,11 +148,10 @@
                 <input type="submit">
             </div>
         </form>
-
+        </div>
 
         <p>--------------------------</p>
-        <div id="preface">
-            <p>This page is to demonstrate a regular form but with custom messaging rather than stock 'out of the box' messaging</p>
+        <div id="postContent">
             <p>Benefits of custom form validation messaging:</p>
             <ul>
                 <li>Tailor messaging based on your user audience</li>

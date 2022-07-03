@@ -1,4 +1,4 @@
-#preface {
+#postContent {
     font-style: italic;
 }
 
@@ -140,9 +140,10 @@ input[type='date'] {
     padding: 0;
     font-size: 95%;
     color: white;
-    background-color: #900;
+    background-color: #bf616a;
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
+    text-align: center;
   }
 
 /* .asterisk::before {
@@ -194,8 +195,9 @@ input[type='date'] {
         padding: 0;
         font-size: 95%;
         color: white;
-        background-color: #900;
+        background-color: #bf616a;
         border-radius: 0 0 5px 5px;
+        text-align: center;
     }
   }
 

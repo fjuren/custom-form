@@ -18,11 +18,11 @@ const unitNumberErrorMessage = document.querySelectorAll('span.error')[3];
 const cityInput = document.querySelector('input#city');
 const cityErrorMessage = document.querySelectorAll('span.error')[4];
 
-const stateProvinceInput = document.querySelector('input#stateProvince');
-const stateProvinceErrorMessage = document.querySelectorAll('span.error')[5];
+const provinceInput = document.querySelector('input#Province');
+const provinceErrorMessage = document.querySelectorAll('span.error')[5];
 
-const zipInput = document.querySelector('input#zipPostal');
-const zipErrorMessage = document.querySelectorAll('span.error')[6];
+const postalInput = document.querySelector('input#Postal');
+const postalErrorMessage = document.querySelectorAll('span.error')[6];
 
 const countryInput = document.querySelector('input#country');
 const countryErrorMessage = document.querySelectorAll('span.error')[7];
@@ -145,66 +145,51 @@ cityInput.addEventListener('keypress', (event) => {
 });
 
 // Assesses validation criteria for state/provnice field
-const stateProvinceError = () => {
-    if (stateProvinceInput.validity.valueMissing) {
-        stateProvinceErrorMessage.textContent = 'Please enter your state or province';
+const provinceError = () => {
+    if (provinceInput.validity.valueMissing) {
+        provinceErrorMessage.textContent = 'Please enter your province';
     } else {
         // do nothing
     }
 };
 
-// state/province prompt. Called when submit btn pressed
-const stataProvinceErrorHandling = () => {
-    if (!stateProvinceInput.validity.valid) {
-        stateProvinceError();
+// province prompt. Called when submit btn pressed
+const provinceErrorHandling = () => {
+    if (!provinceInput.validity.valid) {
+        provinceError();
         } else {
-            stateProvinceErrorMessage.textContent = '';
+            provinceErrorMessage.textContent = '';
         }
 };
 
 // format for province field
 const provinceFormatter = () => {
-    stateProvinceInput.addEventListener('keypress', (event) => {
+    provinceInput.addEventListener('keypress', (event) => {
 
 });
 };
 
-// format for state field
-const stateFormatter = () => {
-    stateProvinceInput.addEventListener('keypress', (event) => {
-
-    });
-};
-
-
 // Assesses validation criteria for zip/postal code field
-const zipError = () => {
-    if (zipInput.validity.valueMissing) {
-        zipErrorMessage.textContent = 'Please enter your zip code or postal code';
+const postalError = () => {
+    if (postalInput.validity.valueMissing) {
+        postalErrorMessage.textContent = 'Please enter your postal code';
     } else {
         // do nothing
     }
 };
 
 // zip/postal code prompt. Called when submit btn pressed
-const zipErrorHandling = () => {
-    if (!zipInput.validity.valid) {
-        zipError();
+const postalErrorHandling = () => {
+    if (!postalInput.validity.valid) {
+        postalError();
         } else {
-            zipErrorMessage.textContent = '';
+            postalErrorMessage.textContent = '';
         }
-};
-
-// format for zip code
-const zipFormatter = () => {
-    stateProvinceInput.addEventListener('keypress', (event) => {
-
-});
 };
 
 // format for postal code
 const postalFormatter = () => {
-    stateProvinceInput.addEventListener('keypress', (event) => {
+    postalInput.addEventListener('keypress', (event) => {
 
     });
 };
@@ -357,8 +342,8 @@ form.addEventListener('submit', (event) => {
     addressErrorHandling();
     unitNumberErrorHandling();
     cityErrorHandling();
-    stataProvinceErrorHandling();
-    zipErrorHandling();
+    provinceErrorHandling();
+    postalErrorHandling();
     countryErrorHandling();
     emailErrorHandling();
     phoneErrorHandling();
