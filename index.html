@@ -17,12 +17,14 @@
             <h3>Custom form validation</h3>
             <p>This page is to demonstrate custom validation messaging rather than stock, 'out of the box' messaging. Postal code and phone number fields demonstrate auto formatting for users</p>
             <p>Out of scope: country information outside of Canada</p>
-            <p>Try the following:</p>
+            <p>As you fill out the form, try the following:</p>
             <ol>
                 <li>Click submit without completing any fields</li>
                 <li>Type your full name without capitalization</li>
                 <li>Enter a unit number like "Unit 35"</li>
+                <li>Type a full province name like "British Columbia"</li>
             </ol>
+            <p>--------------------------</p>
         <!-- novalidate remoes stock form validation -->
         <form action="#" autocomplete="off" novalidate>
             <h3>Personal</h3>
@@ -64,7 +66,7 @@
             <div class="boxes">
                 <div class="input-group">
                     <!-- Address -->
-                    <label for="address">Address
+                    <label for="address">Street address
                         <span class="error"></span>
                     </label>
                     <input type="text" name="address" id="address" required>
@@ -81,28 +83,28 @@
                     <label for="city">City
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="city" id="city" required>
+                    <input type="text" name="city" id="city" pattern="^[A-Z][a-zA-Z]*$" required>
                 </div>
                 <div class="input-group">
                     <!-- State/province -->
                     <label for="Province">Province
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="Province" id="Province" required>
+                    <input type="text" name="Province" id="Province" pattern="[A-Z][A-Z]" required>
                 </div>
                 <div class="input-group">
                     <!-- Zip/postal code -->
                     <label for="Postal">Postal code
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="Postal" id="Postal" required>
+                    <input type="text" name="Postal" id="Postal" pattern="^[ABCEGHJKLMNPRSTVXY]{1}\d{1}[A-Z]{1} *\d{1}[A-Z]{1}\d{1}$" maxlength="7" required>
                 </div>
                 <div class="input-group">
                     <!-- Country -->
                     <label for="country">Country
                         <span class="error"></span>
                     </label>
-                    <input type="text" name="country" id="country" pattern="^[A-Z][a-zA-Z]*$" required>
+                    <input type="text" name="country" id="country" pattern="^[A-Z][a-zA-Z]*$" value="Canada" style="color:grey" readonly>
                 </div>
                 <div class="input-group">
                     <!-- Email -->
@@ -134,14 +136,14 @@
                     <label for="password1">Password
                         <span class="error"></span>
                     </label>
-                    <input type="password1" name="password1" id="password1" required>
+                    <input type="password" name="password1" id="password1" required>
                 </div>
                 <div class="input-group">
                     <!-- Repeat Password -->
                     <label for="password2">Repeat password
                         <span class="error"></span>
                     </label>
-                    <input type="password2" name="password2" id="password2" required>
+                    <input type="password" name="password2" id="password2" required>
                 </div>
             </div>
             <div id="submitButton">

@@ -106,7 +106,7 @@ const unitNumberError = () => {
     if (unitNumberInput.validity.valueMissing) {
         unitNumberErrorMessage.textContent = 'Please enter your unit number';
     } else if (unitNumberInput.validity.patternMismatch) {
-        unitNumberErrorMessage.textContent = 'Please enter numerical values only';
+        unitNumberErrorMessage.textContent = 'Unit should be numerical values only';
     } else {
         // do nothing
     }
@@ -125,6 +125,8 @@ const unitNumberErrorHandling = () => {
 const cityError = () => {
     if (cityInput.validity.valueMissing) {
         cityErrorMessage.textContent = 'Please enter your city';
+    } else if (cityInput.validity.patternMismatch) {
+        cityErrorMessage.textContent = 'Capitalize the first letter (e.g., Halifax)';
     } else {
         // do nothing
     }
@@ -139,17 +141,12 @@ const cityErrorHandling = () => {
         }
 };
 
-// format for city field
-cityInput.addEventListener('keypress', (event) => {
-
-});
-
 // Assesses validation criteria for state/provnice field
 const provinceError = () => {
     if (provinceInput.validity.valueMissing) {
         provinceErrorMessage.textContent = 'Please enter your province';
-    } else {
-        // do nothing
+    } else if (provinceInput.validity.patternMismatch) {
+        provinceErrorMessage.textContent = 'Use province abbreviation (e.g., BC) ';
     }
 };
 
@@ -162,19 +159,12 @@ const provinceErrorHandling = () => {
         }
 };
 
-// format for province field
-const provinceFormatter = () => {
-    provinceInput.addEventListener('keypress', (event) => {
-
-});
-};
-
 // Assesses validation criteria for zip/postal code field
 const postalError = () => {
     if (postalInput.validity.valueMissing) {
         postalErrorMessage.textContent = 'Please enter your postal code';
-    } else {
-        // do nothing
+    } else if (postalInput.validity.patternMismatch) {
+        postalErrorMessage.textContent = 'Incorrect format (e.g., H2G 8H1)';
     }
 };
 
@@ -188,11 +178,18 @@ const postalErrorHandling = () => {
 };
 
 // format for postal code
-const postalFormatter = () => {
-    postalInput.addEventListener('keypress', (event) => {
 
-    });
-};
+postalInput.addEventListener('keypress', (event) => {
+    const postalLength = postalInput.value.length;
+    const tempPostal = postalInput.value;
+    if (postalLength === 3) {
+        postalInput.value = tempPostal + ' ';
+    } else if (postalLength === 6) {
+        postalInput.value = postalInput.value.toUpperCase();
+    } else {
+        // do nothing
+    }
+});
 
 // Assesses validation criteria for country field
 const countryError = () => {
@@ -214,19 +211,12 @@ const countryErrorHandling = () => {
         }
 };
 
-// format for Country
-const countryFormatter = () => {
-    countryInput.addEventListener('keypress', (event) => {
-
-});
-};
-
 // Assesses validation criteria for email field
 const emailError = () => {
     if (emailInput.validity.valueMissing) {
         emailErrorMessage.textContent = 'Please enter your email';
-    } else {
-        // do nothing
+    } else if (emailInput.validity.typeMismatch) {
+        emailErrorMessage.textContent = 'Not a valid email address';
     }
 };
 
@@ -237,13 +227,6 @@ const emailErrorHandling = () => {
         } else {
             emailErrorMessage.textContent = '';
         }
-};
-
-// format for email
-const emailFormatter = () => {
-    emailInput.addEventListener('keypress', (event) => {
-
-});
 };
 
 // Assesses validation criteria for phone field
@@ -258,15 +241,15 @@ const phoneError = () => {
 // formatting for phone field
 phoneInput.addEventListener('keypress', (event) => {
     const phoneInputLength = phoneInput.value.length;
-    const holder = phoneInput.value;
+    const tempPhone = phoneInput.value;
     if (phoneInputLength === 0) {
-        phoneInput.value = holder + '(';
+        phoneInput.value = tempPhone + '(';
     } else if (phoneInputLength === 4) {
-        phoneInput.value = holder + ') ';
+        phoneInput.value = tempPhone + ') ';
     } else if (phoneInputLength === 6) {
-        phoneInput.value = holder + ' ';
+        phoneInput.value = tempPhone + ' ';
     } else if (phoneInputLength === 9) {
-        phoneInput.value = holder + '-';
+        phoneInput.value = tempPhone + '-';
     } else {
         // do nothing
     }
@@ -321,18 +304,21 @@ const password1ErrorHandling = () => {
 const password2Error = () => {
     if (password2Input.validity.valueMissing) {
         password2ErrorMessage.textContent = 'Please re-enter your password';
-    } else {
-        // do nothing
+    } else if (password1Input.value != password2Input.value) {
+        console.log('ran');
+        password2ErrorMessage.textContent = 'Passwords do not match';
     }
 };
 
-// password2 prompt. Called when submit btn pressed
 const password2ErrorHandling = () => {
     if (!password2Input.validity.valid) {
         password2Error();
-        } else {
-            password2ErrorMessage.textContent = '';
-        }
+     } else if (password1Input.value != password2Input.value) {
+        password2ErrorMessage.textContent = 'Passwords do not match';
+     } else {
+        password2ErrorMessage.textContent = '';
+        console.log('error not found');
+    }
 };
 
 // Runs all field validations on form submit
